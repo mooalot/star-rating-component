@@ -1,0 +1,41 @@
+:host {
+    --rating-active-fill-color: #f5f846;
+    --rating-inactive-fill-color: #d8d8d8;
+    --rating-active-stroke-color: #ffb400;
+    --rating-inactive-stroke-color: #d8d8d8;
+    --rating-star-size: 2rem;
+    --rating-star-spacing: 0.1rem;
+    --rating-star-shadow-color: rgba(0, 0, 0, .7);
+    .rating-container {
+        --inner-padding: 2px;
+        --stroke-width: .5rem;
+        height: var(--rating-star-size);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        column-gap: var(--rating-star-spacing);
+        padding: 4px;
+        .star {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(var(--rating-star-size) - var(--inner-padding));
+            svg {
+                filter: drop-shadow( calc(var(--inner-padding) / 2) calc(var(--inner-padding) / 2) var(--inner-padding) var(--rating-star-shadow-color));
+            }
+            path {
+                stroke-width: var(--stroke-width);
+                fill: var(--rating-inactive-fill-color);
+                stroke: var(--rating-inactive-stroke-color);
+                transition: fill 0.2s ease-in-out;
+                transition: stroke 0.2s ease-in-out;
+            }
+            &.active {
+                path {
+                    fill: var(--rating-active-fill-color);
+                    stroke: var(--rating-active-stroke-color);
+                }
+            }
+        }
+    }
+}

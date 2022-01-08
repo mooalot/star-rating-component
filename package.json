@@ -1,0 +1,35 @@
+{
+    "name": "star-rating-component",
+    "version": "1.0.5",
+    "description": "A simple star rating component",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.js",
+    "es2015": "dist/esm/index.mjs",
+    "es2017": "dist/esm/index.mjs",
+    "types": "dist/types/components.d.ts",
+    "collection": "dist/collection/collection-manifest.json",
+    "collection:main": "dist/collection/index.js",
+    "unpkg": "dist/components/components.esm.js",
+    "files": [
+        "dist/",
+        "loader/"
+    ],
+    "scripts": {
+        "build": "stencil build --docs",
+        "start": "stencil build --dev --watch --serve --no-open",
+        "test": "stencil test --spec --e2e",
+        "test.watch": "stencil test --spec --e2e --watchAll",
+        "generate": "stencil generate"
+    },
+    "dependencies": {
+        "@stencil/core": "^2.11.0",
+        "@stencil/sass": "^1.5.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.24",
+        "jest": "^26.6.3",
+        "jest-cli": "^26.6.3",
+        "puppeteer": "^10.0.0"
+    },
+    "license": "MIT"
+}
