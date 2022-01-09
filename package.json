@@ -1,6 +1,6 @@
 {
     "name": "star-rating-component",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "A simple star rating component",
     "main": "dist/index.cjs.js",
     "module": "dist/index.js",
@@ -14,6 +14,10 @@
         "dist/",
         "loader/"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mooalot/star-rating-component"
+    },
     "scripts": {
         "build": "stencil build --docs",
         "start": "stencil build --dev --watch --serve --no-open",
